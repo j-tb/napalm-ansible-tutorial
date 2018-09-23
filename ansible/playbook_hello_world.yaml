@@ -9,10 +9,10 @@
         hostname: "{{ host }}"            # start of connection parameters
         username: "{{ user }}"
         dev_os: "{{ os }}"
-        # password: "{{ password }}"
+        password: "{{ password }}"
         filter: ['facts']               # which NAPALM getters to use
-        optional_args:
-          key_file: ~/.ssh/id_rsa_napalm
+        # optional_args:
+        #   key_file: ~/.ssh/id_rsa_napalm
       register: napalm_facts             # store information here
     - name: Print gathered facts
       debug:
