@@ -12,7 +12,7 @@
         # password: "{{ password }}"
         filter: ['facts']               # which NAPALM getters to use
         optional_args:
-          key_file: "{{ key_file }}"
+          key_file: ~/.ssh/id_rsa_napalm
       register: napalm_facts             # store information here
     - name: Print gathered facts
       debug:
