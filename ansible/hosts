@@ -1,6 +1,5 @@
-[defaults]
-inventory  = hosts
-library = /usr/lib/python2.7/site-packages/napalm_ansible/modules:/usr/share/modules/
-callback_whitelist = profile_tasks
-vault_password_file = /root/.vault/.vault_pass
-action_plugins = /usr/lib/python2.7/site-packages/napalm_ansible/plugins/action
+[all]
+srx1 os=junos   host=192.168.57.10 user=napalm password=Juniper
+
+
+[all:vars]
