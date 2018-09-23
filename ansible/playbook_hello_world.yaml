@@ -10,9 +10,9 @@
         username: "{{ user }}"
         dev_os: "{{ os }}"
         # password: "{{ password }}"
-        filter: ['facts']                # which NAPALM getters to use
+        filter: ['facts']               # which NAPALM getters to use
         optional_args:
-          private_key_file: "{{ key_file }}"
+          key_file: "{{ key_file }}"
       register: napalm_facts             # store information here
     - name: Print gathered facts
       debug:
