@@ -11,8 +11,6 @@
     username: "{{ user }}"
     dev_os: "{{ os }}"
     password: "{{ password }}"
-    optional_args:
-      port: "{{ port }}"
     validation_file: "{{ host_tmpdir }}/validate.yaml"
   register: validation
 - name: "Failed Compliance Report"
