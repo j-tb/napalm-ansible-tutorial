@@ -51,8 +51,6 @@
         username: "{{ user }}"
         dev_os: "{{ os }}"
         password: "{{ password }}"
-        optional_args:
-          port: "{{ port }}"
         config_file: "{{ host_tmpdir }}/assembled.conf"
         commit_changes: "{{ not ansible_check_mode }}"
         replace_config: true
@@ -61,4 +59,3 @@
       tags: [print_action]
     - include: includes/validate.yaml
       when: not ansible_check_mode
-
