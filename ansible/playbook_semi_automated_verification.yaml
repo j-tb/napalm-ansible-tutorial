@@ -12,7 +12,7 @@
         password: "{{ password }}"
         optional_args:
           port: "{{ port }}"
-        filter: 
+        filter:
             - 'facts'
             - 'interfaces'
             - 'interfaces_ip'
