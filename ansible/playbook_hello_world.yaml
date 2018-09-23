@@ -9,9 +9,10 @@
         hostname: "{{ host }}"            # start of connection parameters
         username: "{{ user }}"
         dev_os: "{{ os }}"
-        private_key_file: "{{ key_file }}"
         # password: "{{ password }}"
         filter: ['facts']                # which NAPALM getters to use
+        optional_args: "{{ key_file }}"
+          private_key_file:
       register: napalm_facts             # store information here
     - name: Print gathered facts
       debug:
