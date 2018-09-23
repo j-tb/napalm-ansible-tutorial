@@ -1,4 +1,4 @@
 host 192.168.57.10
-  HostName srx01
+  HostName 192.168.57.10
   IdentityFile /root/.ssh/id_rsa_napalm
   User napalm
