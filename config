@@ -1,0 +1,4 @@
+host srx01
+  HostName srx01
+  IdentityFile /root/.ssh/id_rsa_napalm
+  User napalm
