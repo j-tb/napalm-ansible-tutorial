@@ -1,2 +1,9 @@
 ---
 domain: acme.com
+
+interfaces:
+  - name: "lo0"
+    description: "Loopback interface"
+    ips:
+     - "10.250.250.1/32"
+    enabled: true
