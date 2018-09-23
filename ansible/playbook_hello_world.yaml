@@ -11,8 +11,8 @@
         dev_os: "{{ os }}"
         # password: "{{ password }}"
         filter: ['facts']                # which NAPALM getters to use
-        optional_args: "{{ key_file }}"
-          private_key_file:
+        optional_args:
+          private_key_file: "{{ key_file }}"
       register: napalm_facts             # store information here
     - name: Print gathered facts
       debug:
