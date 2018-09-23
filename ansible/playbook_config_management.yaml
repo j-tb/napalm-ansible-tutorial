@@ -44,7 +44,8 @@
         hostname: "{{ host }}"
         username: "{{ user }}"
         dev_os: "{{ os }}"
-        password: "{{ password }}"
+        private_key_file: {{ key_file }}
+        # password: "{{ password }}"
         config_file: "{{ host_tmpdir }}/assembled.conf"
         commit_changes: "{{ not ansible_check_mode }}"
         replace_config: false

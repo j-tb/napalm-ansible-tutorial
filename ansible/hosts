@@ -1,5 +1,5 @@
 [all]
-srx01 os=junos   host=192.168.57.10 user=napalm password=Juniper
+srx01 os=junos   host=192.168.57.10 user=napalm password=Juniper key_file=./.ssh/id_rsa_napalm
 
 
 [all:vars]

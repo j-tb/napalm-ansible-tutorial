@@ -9,18 +9,17 @@ FROM dcn-ansible:latest
 ENV http_proxy=''
 ENV https_proxy=''
 
-RUN apk add zsh
-RUN apk add vim
-RUN apk add tmux
+# RUN apk add zsh
+# RUN apk add vim
+# RUN apk add tmux
 
-RUN git clone https://github.com/Parth/dotfiles.git
+# RUN git clone https://github.com/Parth/dotfiles.git
 
-RUN mv ~/.zshrc ~/.zshrc.old
-RUN mv ~/.tmux.conf ~/.tmux.conf.old
-RUN mv ~/.vimrc ~/.vimrc.old
-RUN printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
-RUN printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
-RUN printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
+# RUN printf "source '$HOME/dotfiles/zsh/zshrc_manager.sh'" > ~/.zshrc
+# RUN printf "so $HOME/dotfiles/vim/vimrc.vim" > ~/.vimrc
+# RUN printf "source-file $HOME/dotfiles/tmux/tmux.conf" > ~/.tmux.conf
+
+COPY ./ssh-config/* ./.ssh/
 
 COPY ./entrypoint.sh /
 ENTRYPOINT ["/entrypoint.sh"]
